@@ -1,0 +1,29 @@
+<head>
+  <title>counterApp</title>
+</head>
+
+<body>
+  <h1>Welcome to Counter App!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+	<style type="text/css">
+        body {
+            background-color: {{ red }}
+        }
+    </style>
+	<p> Login </p>
+	<input name= "username" type = "text"/>
+	<p> Password </p>
+	<input name="password" type = "text"/>
+  <button>Counter Click </button>
+  <p>You've pressed the button {{counter}} times.</p>
+  <h2> Users List </h2>
+  <ul>
+  	{{ #each clickDetails }}
+  	<li> {{ this.username }}</li>
+  	{{/each}}
+  </ul>
+</template>
